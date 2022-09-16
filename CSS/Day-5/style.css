@@ -1,0 +1,30 @@
+h1::before {
+    content: '\260E';
+    color: rgb(0, 137, 23);
+}
+
+h1::after {
+    content: 'this is after';
+    color: purple;
+}
+
+li {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+li:first-child {
+    color: blue;
+}
+
+li:last-child {
+    color: red;
+}
+
+li:nth-of-type(2n+3) {
+    color: rgb(14, 137, 137);
+}
+
+li:nth-of-type(even) {
+    color: rgb(224, 13, 13);
+}

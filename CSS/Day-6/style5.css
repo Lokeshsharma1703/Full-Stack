@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    height: 50px;
+    width: 100vw;
+    background-color: aqua;
+    border: 2px solid black;
+    margin-top: 25px;
+    position: sticky;
+    top: 10px;
+}

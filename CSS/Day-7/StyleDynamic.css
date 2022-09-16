@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(246, 242, 242);
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    margin-top: 10px;
+    width: 100%;
+    height: 10vh;
+    box-shadow: 1px 1px 10px gray;
+    border-radius: 20px;
+    background-color: white;
+}
+
+nav ul {
+    float: right;
+    margin-right: 50px;
+}
+
+li {
+    display: inline-block;
+    margin: 0 8px;
+    line-height: 10vh;
+}
+
+a {
+    font-family: "Public Sans";
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: black;
+    border: 1px solid transparent;
+    padding: 7px 10px;
+    border-radius: 7px;
+}
+
+label.logo {
+    font-size: 35px;
+    font-weight: bold;
+    color: black;
+    padding: 0 60px 0 80px;
+    line-height: 10vh;
+}
+
+a:hover {
+    border: 1px solid black;
+    transition: .5s;
+    background-color: rgb(60, 60, 60);
+    color: white;
+}
+
+nav #icon {
+    color: black;
+    font-size: 25px;
+    line-height: 10vh;
+    opacity: 0;
+    float: right;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+@media (max-width: 1048px) {
+    label.logo {
+        font-size: 32px;
+        padding-left: 50px;
+    }
+    nav ul {
+        margin-right: 20px;
+    }
+    nav a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 909px) {
+    nav #icon {
+        display: block;
+        opacity: 100;
+    }
+    nav ul {
+        position: fixed;
+        width: 50%;
+        height: 45vh;
+        border-radius: 20px;
+        box-shadow: 1px 1px 10px gray;
+        background-color: white;
+        top: 14vh;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav li {
+        display: block;
+        line-height: 50px;
+    }
+    nav a {
+        font-size: 14px;
+    }
+    a:hover {
+        background: none;
+        color: rgb(21, 21, 112);
+        font-weight: bold;
+    }
+    nav ul.show {
+        left: 25vw;
+    }
+}
+
+@media (max-width: 350px) {
+    label.logo {
+        font-size: 25px;
+        padding: 0 20px 0 30px;
+    }
+    nav ul {
+        position: fixed;
+        width: 95%;
+        height: 45vh;
+        border-radius: 20px;
+        box-shadow: 1px 1px 10px gray;
+        background-color: white;
+        top: 14vh;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul.show {
+        left: 2vw;
+    }
+}
+
+@media (max-width: 200px) {
+    label.logo {
+        font-size: 25px;
+        padding: 0 20px 0 30px;
+    }
+    nav ul {
+        position: fixed;
+        width: 95%;
+        height: 45vh;
+        border-radius: 20px;
+        box-shadow: 1px 1px 10px gray;
+        background-color: white;
+        top: 14vh;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul.show {
+        left: 2vw;
+    }
+}
+
+span {
+    font-size: 70px;
+    font-weight: bold;
+}
+
+#home {
+    height: calc(100vh - 10vh - 30px);
+    width: 100%;
+    background-color: white;
+    margin-top: 10px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px gray;
+    text-shadow: 5px 5px 2px gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec {
+    height: calc(100vh - 10vh - 20px);
+    width: 100%;
+    background-color: white;
+    margin-top: 10px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px gray;
+    text-shadow: 5px 5px 2px gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    height: 10vh;
+    width: 100%;
+    background-color: white;
+    box-shadow: 1px 1px 10px gray;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin: 10px 0 10px 0;
+}
+
+div {
+    height: 10vh;
+    width: 100%;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    width: 4vh;
+    height: 4vh;
+    margin: 10px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.215);
+    color: #1a1a1a;
+    overflow: hidden;
+    position: relative;
+}
+
+.btn i {
+    line-height: 4vh;
+    font-size: 25px;
+    transition: .2s linear;
+}
+
+.btn:hover {
+    transform: scale(1.2);
+    color: #f1f1f1;
+}

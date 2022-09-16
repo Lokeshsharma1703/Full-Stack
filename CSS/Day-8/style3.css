@@ -1,0 +1,32 @@
+section {
+    height: 97vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 6rem;
+    text-shadow: 10px 10px 5px gray, 15px 15px 1px gray, 20px 20px 1px gray, 25px 25px 1px gray;
+    transition: 1s;
+    animation: 3s linear 1s infinite round;
+}
+
+h1:hover {
+    /* transform: rotate(360deg); */
+    /* transform: skew(20deg, -20deg); */
+    /* transform: scaleX(1.5); */
+}
+
+@keyframes round {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

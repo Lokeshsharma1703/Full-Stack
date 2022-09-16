@@ -1,0 +1,38 @@
+h1 {
+    color: red;
+}
+
+.top-heading {
+    color: purple;
+}
+
+#heading {
+    color: blue;
+}
+
+section {
+    border: 2px solid black;
+    color: red;
+}
+
+div {
+    height: 150px;
+    width: 150px;
+    border: 2px solid black;
+}
+
+div:nth-of-type(1) {
+    background-color: #ee2211;
+}
+
+div:nth-of-type(2) {
+    background-color: rgb(150, 10, 220);
+}
+
+div:nth-of-type(3) {
+    background-color: rgba(23, 230, 23, .5);
+}
+
+div:nth-of-type(4) {
+    background-color: hsl(350, 80%, 60%);
+}

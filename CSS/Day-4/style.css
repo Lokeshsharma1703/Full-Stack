@@ -1,0 +1,82 @@
+ul {
+    color: green;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    list-style-type: lower-greek;
+}
+
+ul li a {
+    text-decoration: none;
+    color: rgb(10, 122, 167);
+    text-shadow: 2px 2px 5px blue;
+}
+
+#sometext {
+    font-size: 25px;
+    color: green;
+}
+
+.some {
+    font-size: 30px;
+    color: aqua;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    background-color: rgb(229, 229, 229);
+    height: 30px;
+    width: 200px;
+    border-radius: 10px;
+    border-bottom: 5px solid blue;
+}
+
+input[type="text"]:hover {
+    background-color: antiquewhite;
+    transform: scale(1.05);
+    box-shadow: 5px 5px 10px gray;
+}
+
+h4+span {
+    color: brown;
+    font-size: 25px;
+}
+
+#box {
+    height: 200px;
+    width: 200px;
+    background-color: green;
+    border: 2px solid black;
+    transition: .5s;
+}
+
+#box:hover {
+    background-color: skyblue;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+#list li:first-child {
+    color: blue;
+}
+
+#list li:last-child {
+    color: purple;
+    font-size: 35px;
+}
+
+#list li:nth-child(3) {
+    color: red;
+    font-size: 17px;
+}
+
+
+/* ol li:nth-last-of-type(2n+3) {
+    color: red;
+    font-size: 20px;
+}*/
+
+ol li:nth-of-type(even) {
+    color: blue;
+    font-size: 20px;
+}

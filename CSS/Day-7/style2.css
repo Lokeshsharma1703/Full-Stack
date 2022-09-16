@@ -1,0 +1,14 @@
+div {
+    height: 60vh;
+    width: 50vw;
+    border: 2px solid black;
+    overflow: auto;
+}
+
+img {
+    float: right;
+}
+
+p:last-child {
+    clear: both;
+}

@@ -1,0 +1,97 @@
+body {
+    font-family: 'Times New Roman';
+    /* background-color: rgb(222, 224, 226); */
+    background-image: linear-gradient(to right bottom, rgb(184, 219, 233), rgb(163, 163, 254));
+    display: flex;
+    justify-content: center;
+}
+
+#page {
+    background-color: white;
+    width: 50%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0px 0px 50px gray;
+}
+
+header {
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: rgb(10, 87, 163);
+    text-transform: uppercase;
+    font-size: 25px;
+    margin: 0;
+}
+
+#headname {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.headfont {
+    margin: 3px;
+}
+
+h4 {
+    color: blue;
+}
+
+#photo {
+    height: 110px;
+    width: 100px;
+    padding: 10px;
+    font-size: 15px;
+    border: 5px solid rgb(10, 87, 163);
+    border-radius: 25px;
+    position: absolute;
+    top: 95px;
+    right: 390px;
+}
+
+#photo-content {
+    color: black;
+    position: absolute;
+    top: 20px;
+    left: 23px;
+}
+
+.edu_text {
+    margin: 5px;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.edu-sec {
+    display: flex;
+    justify-content: space-between;
+}
+
+.projects {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.pro_p {
+    margin: 0;
+    color: black;
+}
+
+.skills ul li {
+    margin: 5px;
+    font-weight: bold;
+}
+
+.fa {
+    font-size: 25px;
+    color: blue;
+}
