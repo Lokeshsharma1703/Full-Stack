@@ -71,6 +71,9 @@ h3 {
     grid-column-end: 3;
     background-color: hsl(263, 55%, 52%);
     color: hsl(0, 0%, 85%);
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: top 10px right 90px;
 }
 
 .box:nth-of-type(2) {
