@@ -9,6 +9,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* overflow: hidden; */
 }
 
 header {
@@ -50,8 +51,8 @@ header ul li a {
 }
 
 header ul li a:hover {
-    color: rgb(208, 177, 83);
-    border-bottom: 2px solid rgb(208, 177, 83);
+    color: #d3ad7f;
+    border-bottom: 2px solid #d3ad7f;
 }
 
 #icons {
@@ -72,7 +73,40 @@ header ul li a:hover {
 }
 
 #icons i:hover {
-    color: rgb(208, 177, 83);
+    color: #d3ad7f;
+}
+
+header .search-form {
+    position: absolute;
+    top: 115%;
+    right: 7%;
+    background: white;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+header .search-form input {
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: rgb(22, 22, 22);
+    padding: 1rem;
+    text-transform: none;
+}
+
+header .search-form label {
+    cursor: pointer;
+    font-size: 2.2rem;
+    margin-right: 1.5rem;
+    color: rgb(22, 22, 22);
+}
+
+header .search-form label:hover {
+    color: rgb(22, 22, 22);
 }
 
 main {
@@ -104,7 +138,7 @@ main {
 }
 
 #main-content button {
-    background-color: rgb(208, 177, 83);
+    background-color: #d3ad7f;
     color: white;
     font-size: 1.2em;
     height: 50px;
@@ -135,7 +169,7 @@ main img {
 }
 
 .head span {
-    color: rgb(208, 177, 83);
+    color: #d3ad7f;
 }
 
 #aboutus {
@@ -163,7 +197,7 @@ main img {
 }
 
 #aboutus article button {
-    background-color: rgb(208, 177, 83);
+    background-color: #d3ad7f;
     color: white;
     font-size: 1.2em;
     height: 50px;
@@ -184,7 +218,7 @@ main img {
     margin: 20px 0;
     font-size: 3em;
     text-transform: uppercase;
-    color: rgb(208, 177, 83);
+    color: #d3ad7f;
     font-weight: bold;
 }
 
