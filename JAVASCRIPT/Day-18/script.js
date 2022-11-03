@@ -20,6 +20,10 @@
 //     console.log('reject');
 // });
 
+
+//-------------------------------------------------------------------------------
+
+
 // async function abc(data) {
 //     return new Promise((resolve, reject) => {
 //         resolve(data);
@@ -36,35 +40,48 @@
 
 // abc(23);
 
-
+//------------------------------------------------------------------------------------
 
 //promises using fs module
 
 // pending state usually occurs in API
-// const fs = require("fs");
-// let readFilePromise = fs.promises.readFile('index.html', 'utf-8');
+const fs = require("fs");
+// const { resolve } = require("path");
+// let readFilePromise = fs.promises.readFile('a.txt', 'utf-8');
 // console.log(readFilePromise); //pending state
+
 // readFilePromise.then((data) => {
+//         console.log(data);
+//     })
+//     // .then(() => {
+//     //     console.log('hello')
+//     // })
+
+// async function abc() {
+//     let data = await fs.promises.readFile('a.txt', 'utf-8');
 //     console.log(data);
-// }).then(() => {
-//     console.log('hello')
-// })
+// }
+// abc();
 
 
-async function abc() {
-    console.log('hello');
-    return 'abc';
-}
 
-let temp = abc();
-console.log(temp);
+//----------------------------------------------------------------------------
+// async function abc() {
+//     console.log('hello');
+//     return 'abc';
+// }
 
-function abcd() {
-    return new Promise((resolve, reject) => {
-        console.log('hello');
-        resolve('abc');
-    })
-}
+// let temp = abc();
+// console.log(temp);
 
-let temp1 = abcd();
-console.log(temp1);
+// function abcd() {
+//     return new Promise((resolve, reject) => {
+//         console.log('hello');
+//         resolve('abc');
+//     })
+// }
+
+// let temp1 = abcd();
+// console.log(temp1);
+
+//---------------------------------------------------------------------------
