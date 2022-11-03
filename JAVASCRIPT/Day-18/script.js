@@ -41,11 +41,30 @@
 //promises using fs module
 
 // pending state usually occurs in API
-const fs = require("fs");
-let readFilePromise = fs.promises.readFile('index.html', 'utf-8');
-console.log(readFilePromise); //pending state
-readFilePromise.then((data) => {
-    console.log(data);
-}).then(() => {
-    console.log('hello')
-})
+// const fs = require("fs");
+// let readFilePromise = fs.promises.readFile('index.html', 'utf-8');
+// console.log(readFilePromise); //pending state
+// readFilePromise.then((data) => {
+//     console.log(data);
+// }).then(() => {
+//     console.log('hello')
+// })
+
+
+async function abc() {
+    console.log('hello');
+    return 'abc';
+}
+
+let temp = abc();
+console.log(temp);
+
+function abcd() {
+    return new Promise((resolve, reject) => {
+        console.log('hello');
+        resolve('abc');
+    })
+}
+
+let temp1 = abcd();
+console.log(temp1);
