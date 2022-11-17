@@ -56,9 +56,9 @@
 // }
 
 
-var ch = document.querySelector('ul');
-console.log(ch.parentNode);
+// var ch = document.querySelector('ul');
+// console.log(ch.parentNode);
 
-var bd = document.querySelector('body');
-console.log(bd.parentNode);
-console.log(document.querySelector('html').parentNode);
+// var bd = document.querySelector('body');
+// console.log(bd.parentNode);
+// console.log(document.querySelector('html').parentNode);
