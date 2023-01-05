@@ -98,6 +98,7 @@ function addEvent(e) {
     newItem.appendChild(deletebtn);
 
     itemList.appendChild(newItem);
+    item.value = "";
 }
 
 function removeEvent(e) {
@@ -105,6 +106,24 @@ function removeEvent(e) {
         if (confirm('delete karna hai?')) {
             var li = e.target.parentElement;
             itemList.removeChild(li);
+        }
+    }
+}
+
+function myFunction() {
+    var input, filter, ul, li, a, i, textValue;
+    input = document.getElementById('filter');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById('items');
+    li = ul.getElementsByTagName('li');
+
+    for (i = 0; i < li.length; i++) {
+        textValue = li[i].textContent || li[i].innerText;
+        console.log(textValue);
+        if (textValue.toUpperCase().includes(filter)) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
         }
     }
 }
