@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      width: 80vw;
+      margin: 24px auto;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    table {
+      margin-top: 24px;
+    }
+
+    .nav {
+      text-align: center;
+      margin: 24px 0px;
+    }
+
+    .nav a {
+      border-right: 2px solid teal;
+      padding: 0px 18px;
+      color: teal;
+    }
+
+    .nav a:last-child {
+      border-right: 0px solid teal;
+      padding: 0px 18px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Coding Blocks | GLA University</h1>
+  <div class="nav">
+    <a href="./blogs.html">Blogs</a>
+    <a href="./time-table.html">Time table</a>
+    <a href="./syllabus.html">Syllabus</a>
+  </div>
+
+  <table border="5" cellpadding="10">
+    
+    <tr>
+      <td>
+        <img src="data:image/png;base64,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" alt="" width="300">
+      </td>
+      <td>
+        <h3>Coding Blocks</h3>
+        <br>
+        With time tested, result oriented pedagogy & industry aligned courses offering project based learning, our courses are your perfect investment into your career. Get the best in the industry!
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <img src="https://www.gla.ac.in/images/gla-university-logo.jpg" alt="">
+      </td>
+      <td>
+        <h3>GLA University</h3>
+        <br>
+        Located 15 kms from Mathura, GLA University offers a world of learning that will help you reach your goals. Choose from our varied industry endorsed programs. Learn from an outstanding faculty at our state-of-the-art teaching facilities. Explore unlimited opportunities to get placed at one of the 1500+ campus recruiters and meet other students with dreams as big as yours.
+      </td>
+    </tr>
+    
+  </table>
+</body>
+</html>

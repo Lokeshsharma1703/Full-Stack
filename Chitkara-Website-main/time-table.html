@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    body {
+      width: 80vw;
+      margin: 24px auto;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    tr {
+      text-align: center;
+    }
+
+    .nav {
+      text-align: center;
+      margin: 24px 0px;
+    }
+
+    table {
+      width: 80vw;
+      margin: 24px auto;
+    }
+
+    .nav a {
+      border-right: 2px solid teal;
+      padding: 0px 18px;
+      color: teal;
+    }
+
+    .nav a:last-child {
+      border-right: 0px solid teal;
+      padding: 0px 18px;
+    }
+
+    tr:nth-of-type(odd) {
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+  <h1>Time table</h1>
+  <div class="nav">
+    <a href="./home.html">Home</a>
+    <a href="./blogs.html">Blogs</a>
+    <a href="./syllabus.html">Syllabus</a>
+  </div>
+  <table border="10" cellpadding="25">
+    <thead>
+      <tr>
+        <th></th>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+        <th>6</th>
+        <th>7</th>
+        <th>8</th>
+        <th>9</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Monday</td>
+        <td colspan="3">PA</td>
+        <td rowspan="5" style="writing-mode: vertical-lr;">LUNCH</td>
+        <td colspan="3">F&D</td>
+        <td colspan="2">-</td>
+      </tr>
+      <tr>
+        <td>Tuesday</td>
+        <td colspan="3">PA</td>
+        <!-- <td></td> -->
+        <td colspan="3">-</td>
+        <td colspan="2">NALR</td>
+      </tr>
+      <tr>
+        <td>Wednesday</td>
+        <td colspan="3">PA</td>
+        <!-- <td></td> -->
+        <td colspan="3">F&D</td>
+        <td colspan="2">-</td>
+      </tr>
+      <tr>
+        <td>Thurday</td>
+        <td colspan="3">PA</td>
+        <!-- <td></td> -->
+        <td colspan="3">-</td>
+        <td colspan="2">NALR</td>
+      </tr>
+      <tr>
+        <td>Friday</td>
+        <td colspan="3">F&D</td>
+        <!-- <td></td> -->
+        <td colspan="3">-</td>
+        <td colspan="2">NALR</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

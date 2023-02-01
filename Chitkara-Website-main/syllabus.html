@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    body {
+      width: 80vw;
+      margin: 24px auto;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    tr {
+      text-align: center;
+    }
+
+    li>ul {
+      display: none;
+    }
+
+    li:hover>ul {
+      display: block;
+    }
+
+    .nav {
+      text-align: center;
+      margin: 24px 0px;
+    }
+
+    .nav a {
+      border-right: 2px solid teal;
+      padding: 0px 18px;
+      color: teal;
+    }
+
+    .nav a:last-child {
+      border-right: 0px solid teal;
+      padding: 0px 18px;
+    }
+
+    li {
+      font-size: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Syllabus</h1>
+  <div class="nav">
+    <a href="./home.html">Home</a>
+    <a href="./blogs.html">Blogs</a>
+    <a href="./time-table.html">Time table</a>
+  </div>
+  <ul>
+    <li>
+      HTML
+      <ul>
+        <li>Introduction to HTML</li>
+        <li>HTML tags</li>
+        <li>HTML Forms</li>
+        <li>HTML tables</li>
+        <li>
+          Media elements
+          <ul>
+            <li>Image</li>
+            <li>Video</li>
+            <li>Audio</li>
+            <li>Iframe</li>
+          </ul>
+        </li>
+        <li>
+          Semantic elements
+          <ul>
+            <li>nav</li>
+            <li>article</li>
+            <li>section</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>
+      CSS
+      <ul>
+        <li>
+          Introduction to CSS
+          <ul>
+            <li>3 ways to add CSS</li>
+            <li>Basic selectors</li>
+            <li>
+              Combinators
+              <ul>
+                <li>Descendant</li>
+                <li>Child</li>
+                <li>Adjacent sibling</li>
+                <li>General sibling</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<%- include('./partials/header') %>
+
+    <h2>Array : </h2>
+
+    <ul class="list-group">
+        <%for(const todo of todos){ %>
+            <li class="list-group-item">
+                <%=todo%>
+            </li>
+            <% } %>
+    </ul>
+
+    <% let age = 24 %>
+
+        <script src="./JS/todos.js"></script>
+        <script>
+            let myAge = "<%=age%>"; // <%=age%> we can use without quotes
+            alert(myAge);
+        </script>
+
+        <%- include('./partials/footer') %>
