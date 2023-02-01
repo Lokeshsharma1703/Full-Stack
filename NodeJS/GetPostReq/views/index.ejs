@@ -13,12 +13,22 @@
 
     <h2>Get Request</h2>
 
-    <form action="/get" method="get">
+    <form action="/" method="get">
         <label for="user">Username</label>
         <input type="text" id="user" name="user">
 
         <label for="password">Password</label>
         <input type="password" id="password" name="password">
+
+        <button>Submit</button>
+    </form>
+    <br>
+    <form action="/user" method="post">
+        <label for="user">Username</label>
+        <input type="text" id="userp" name="user">
+
+        <label for="password">Password</label>
+        <input type="password" id="passwordp" name="password">
 
         <button>Submit</button>
     </form>

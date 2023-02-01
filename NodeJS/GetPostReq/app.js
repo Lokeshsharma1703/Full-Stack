@@ -6,11 +6,20 @@ app.set('view engine', 'ejs');
 
 app.set('views', path.join(__dirname, 'views'));
 
-app.get('/get', (req, res) => {
+
+app.get('/', (req, res) => {
 
     console.log(req.query);
 
     res.render('index');
+})
+
+
+app.use(express.urlencoded({ extended: true })); //middleware method to use req.body 
+
+app.post('/user', (req, res) => {
+    console.log(req.body);
+    res.send('get request recieved');
 })
 
 
