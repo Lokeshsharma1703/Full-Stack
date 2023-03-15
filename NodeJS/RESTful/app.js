@@ -77,6 +77,7 @@ app.patch('/comments/:commentid', (req, res) => {
     comment.user = req.body.user;
     comment.text = req.body.text;
 
+
     res.redirect('/comments');
 })
 

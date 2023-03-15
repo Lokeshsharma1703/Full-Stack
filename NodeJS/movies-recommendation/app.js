@@ -18,6 +18,8 @@ const app = express();
 app.set("view engine", 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public', 'js')));
+app.use(express.static(path.join(__dirname, 'public', 'css')));
+app.use(express.urlencoded({ extended: true }))
 
 
 
@@ -32,6 +34,28 @@ app.get('/search', async(req, res) => {
     res.status(200).json(movie);
 })
 
+
+app.get('/new', (req, res) => {
+    res.render('addMovie');
+})
+
+app.post('/', (req, res) => {
+    const movie = req.body;
+    // console.log(movie);
+    let newMovie = {
+        name: movie.name,
+        date: Number(movie.year),
+        rating: Number(movie.rating),
+        isValid: false
+    };
+
+    if (Object.keys(movie).length === 4) {
+        newMovie.isValid = true;
+    }
+    Movie.create(newMovie);
+
+    res.redirect('/');
+})
 
 
 

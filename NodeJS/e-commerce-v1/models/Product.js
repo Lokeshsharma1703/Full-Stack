@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 
-const productSchema = mongoose.Schema({
+const productSchema = new mongoose.Schema({
     name: {
         type: String
     },
-    img_url: {
+    img: {
         type: String
     },
     price: {
@@ -12,7 +12,11 @@ const productSchema = mongoose.Schema({
     },
     description: {
         type: String
-    }
+    },
+    review: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Review'
+    }]
 });
 
 const Product = mongoose.model('Product', productSchema);
