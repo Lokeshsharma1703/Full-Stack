@@ -1,11 +1,25 @@
+let result = document.getElementById('main');
+
 async function searchDB(searchText) {
     const res = await fetch(`http://localhost:4000/search?q=${searchText}`);
 
     const data = await res.json();
 
-    console.log(data);
+    // console.log(data);
 
-    createCard(data);
+    for (const ele of data) {
+
+        // console.log(ele);
+
+        let newDiv = document.createElement('div');
+        newDiv.setAttribute('id', 'main-div');
+        newDiv.textContent = ele.name;
+        newDiv.classList = 'card';
+        newDiv.style.width = '200px';
+        newDiv.style.height = '150px';
+        result.appendChild(newDiv);
+    };
+
 }
 
 
@@ -16,17 +30,3 @@ searchInput.addEventListener('keyup', () => {
     // console.log(searchText);
     searchDB(searchText);
 })
-
-const con = document.getElementById('container');
-
-function createCard(movies) {
-    for (const movie of movies) {
-        let card = document.createElement('div');
-        card.className = 'card';
-        let name = document.createElement('h3');
-        name.textContent = movie.name;
-        card.appendChild(name);
-
-        con.appendChild(card);
-    }
-}
