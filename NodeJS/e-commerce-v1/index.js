@@ -1,13 +1,21 @@
 const express = require('express');
-var engine = require('ejs-mate');
+const engine = require('ejs-mate');
 const path = require('path');
 const mongoose = require('mongoose');
 const productRouter = require('./routes/productRoutes');
 const reviewRouter = require('./routes/reviewRoutes');
+const authRoutes = require('./routes/authRoutes');
 const methodOverride = require('method-override');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const flash = require('connect-flash');
+const bcrypt = require('bcrypt');
+const passport = require('passport');
+const passportLocalMongoose = require('passport-local-mongoose');
+const LocalStrategy = require('passport-local');
+const User = require('./models/User');
+
+
 
 
 mongoose.connect('mongodb://127.0.0.1:27017/shopping-app')
@@ -31,6 +39,11 @@ app.set('partials', path.join(__dirname, 'partials'));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 app.use(cookieParser('thisissecretSession'));
+passport.use(new LocalStrategy(User.authenticate()));
+
+// use static serialize and deserialize of model for passport session support
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 
 
 
@@ -62,9 +75,12 @@ app.get('/', (req, res) => {
 //     res.render('./products/product');
 // })
 
+app.use(authRoutes);
+
 app.use(productRouter);
 
 app.use(reviewRouter);
+
 
 
 
