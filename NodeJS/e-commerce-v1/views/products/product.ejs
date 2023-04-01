@@ -3,10 +3,6 @@
 
     <div class="container">
         <div class="row">
-            <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                <%= successMessage %>
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
             <%for(let product of products){%>
                 <div class="card col-4 mx-auto shadow bg-light-rounded" style="width: 19rem; margin: 10px; padding: 0;">
                     <img src="<%=product.img%>" class="card-img-top" alt="..." style="height : 180px">

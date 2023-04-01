@@ -4,7 +4,7 @@ const Review = require('../models/Reviews');
 const Product = require('../models/Product');
 
 
-router.post('/products/:productid/review', async(req, res) => {
+router.post('/products/:productid/review', async (req, res) => {
     const { productid } = req.params;
     const { rating, comment } = req.body;
 
@@ -19,7 +19,7 @@ router.post('/products/:productid/review', async(req, res) => {
 
 })
 
-router.delete('/products/:productid/review/:reviewid', async(req, res) => {
+router.delete('/products/:productid/review/:reviewid', async (req, res) => {
     const { productid, reviewid } = req.params;
 
     const product = await Product.findById(productid);

@@ -1,6 +1,8 @@
 const express = require('express');
+const passport = require('passport');
 const router = express.Router();
 const User = require('../models/User');
+
 
 
 
@@ -15,7 +17,7 @@ router.post('/register', async (req, res) => {
 
     const newUser = await User.register(user, password);
 
-    req.flash('success', 'user registered successfully');
+    req.flash('success', 'You have registered successfully');
 
     res.redirect('/login');
 })
@@ -34,11 +36,23 @@ router.get('/login', (req, res) => {
 })
 
 
-router.post('/login', async (req, res) => {
-    const { username, email, password } = req.body;
+router.post('/login', passport.authenticate('local', {
+    failureRedirect: '/login',
+    failureFlash: 'Login error,please try again!'
+}), (req, res) => {
+    req.flash('success', `${req.user.username.toUpperCase()}, your login was successfull`);
+    res.redirect('/products');
+})
 
-
-
+router.get('/logout', (req, res, next) => {
+    req.logOut(function (err) {
+        if (err) {
+            return next(err);
+        }
+        req.flash('success', 'GoodBye, see you again');
+        res.redirect('/login');
+    }
+    )
 })
 
 

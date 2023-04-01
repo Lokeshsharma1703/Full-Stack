@@ -1,20 +1,26 @@
 const express = require('express');
 const Product = require('../models/Product');
 const router = express.Router();
+const { isLoggedIn } = require('../middleware');
 
-router.get('/products', async(req, res) => {
+
+// get all products
+router.get('/products', async (req, res) => {
 
     const products = await Product.find();
-
-
     res.render('./products/product', { products });
+
 })
 
+
+// get form to add new product
 router.get('/products/new', (req, res) => {
     res.render('./products/new');
 })
 
-router.post('/products', async(req, res) => {
+
+// add a new product
+router.post('/products', async (req, res) => {
     const product = req.body;
     await Product.create(product);
 
@@ -23,7 +29,9 @@ router.post('/products', async(req, res) => {
     res.redirect('/products');
 })
 
-router.get('/products/:productid', async(req, res) => {
+
+// show a single product
+router.get('/products/:productid', async (req, res) => {
     const { productid } = req.params;
     const product = await Product.findById(productid).populate('review');
 
@@ -31,7 +39,9 @@ router.get('/products/:productid', async(req, res) => {
     res.render('./products/show', { product });
 })
 
-router.get('/products/:productid/edit', async(req, res) => {
+
+// get the edit form
+router.get('/products/:productid/edit', isLoggedIn, async (req, res) => {
     const { productid } = req.params;
     const product = await Product.findById(productid);
 
@@ -39,7 +49,9 @@ router.get('/products/:productid/edit', async(req, res) => {
     res.render('./products/edit', { product });
 })
 
-router.patch('/products/:productid', async(req, res) => {
+
+// update a product
+router.patch('/products/:productid', async (req, res) => {
     const { productid } = req.params;
     const { name, img, price, description } = req.body;
 
@@ -51,7 +63,9 @@ router.patch('/products/:productid', async(req, res) => {
 })
 
 
-router.delete('/products/:productid', async(req, res) => {
+
+// delete a product
+router.delete('/products/:productid', async (req, res) => {
     const { productid } = req.params;
 
     await Product.findByIdAndDelete(productid);
